@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Wilder Warehouse Manager.sln"
+    "dotnet.defaultSolution": "WilderWarehouseManager.sln"
 }
