@@ -377,7 +377,7 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
---- !u!1 &671243202
+--- !u!1 &662617284
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -385,24 +385,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 671243203}
+  - component: {fileID: 662617286}
+  - component: {fileID: 662617285}
   m_Layer: 0
-  m_Name: MoveToMarker
+  m_Name: Zone Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &671243203
+--- !u!114 &662617285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662617284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c176a01f5777b4d41b6651b86de52f42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zoneHeight: 3
+--- !u!4 &662617286
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 671243202}
+  m_GameObject: {fileID: 662617284}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.09, y: -0.22584248, z: 4.0923696}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.553193, y: 4.9650016, z: 1.6163124}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -452,37 +466,6 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2087742690
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2087742691}
-  m_Layer: 0
-  m_Name: MoveFromMarker
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2087742691
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2087742690}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.64, y: -0.22584248, z: 4.0923696}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -621,7 +604,7 @@ PrefabInstance:
     - target: {fileID: 1780239950360684743, guid: af5bcff638757614cb5c096fa5c6c803, type: 3}
       propertyPath: moveToLocation
       value: 
-      objectReference: {fileID: 671243203}
+      objectReference: {fileID: 0}
     - target: {fileID: 3405662493519787086, guid: af5bcff638757614cb5c096fa5c6c803, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.75674134
@@ -681,5 +664,4 @@ SceneRoots:
   - {fileID: 415536128081968867}
   - {fileID: 2578687976653742883}
   - {fileID: 669774874902770058}
-  - {fileID: 2087742691}
-  - {fileID: 671243203}
+  - {fileID: 662617286}
