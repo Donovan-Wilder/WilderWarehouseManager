@@ -1,4 +1,5 @@
 using System;
+using com.donovanwilder.wws;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,13 +14,16 @@ public class CreateZone : MonoBehaviour
     private MeshRenderer visibility;
     public float zoneHeight = 3f;
     public float zonePositionY = 1f;
+    private ZoneTracker zoneTracker;
+    public GameObject zoneMarkImage;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        zoneObject = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        zoneObject = Instantiate(zoneMarkImage);
         zoneObject.name = "ZoneArea";
         visibility = zoneObject.GetComponent<MeshRenderer>();
         visibility.enabled = false;
+        zoneTracker = GetComponent<ZoneTracker>();
     }
 
     // Update is called once per frame
@@ -56,6 +60,9 @@ public class CreateZone : MonoBehaviour
             hasStarted = false;
             visibility.enabled= false;
             endPosition = pendingPosition;
+            Zone zone = new Zone(startPosition,endPosition,zoneHeight,zonePositionY);
+            zoneTracker.AddZone(zone);
+            zoneTracker.CreateAllZones();
             Debug.Log($"Create zone: start({startPosition}), pending({pendingPosition}), end({endPosition})");
         } 
     }
